@@ -1,0 +1,32 @@
+create database bus_db;
+
+use bus_db;
+
+create table login(userid varchar(100), password varchar(20),pic longblob);
+
+create table customers(fname varchar(50),lname varchar(50), emailid varchar(100), mobile varchar(10),secret_question varchar(500), answer varchar(500));
+
+create table bus(busno varchar(20),source varchar(50), destination varchar(50), cost int, starttime varchar(10), endtime varchar(10),noofseats int);
+
+create table booking_master(bid varchar(20), userid varchar(100),dob date, busno varchar(20), doj date, total_amt int,payment_mode varchar(20),total_traveller int);
+
+create table booking_details(bid varchar(20), name varchar(100),gender varchar(10));
+
+create table feedback(name varchar(100), emailid varchar(50) ,mobile varchar(10),feedback varchar(500));
+
+
+
+
+insert into login values('admin@bus.com' ,'admin' ,null);
+
+
+insert into customers values('Admin', 'Admin','admin@bus.com','9123456789','First school','Xaviers');
+
+
+
+
+
+
+USE THE ABOVE USERID AND PASSWORD FOR THE ADMIN LOGIN
+
+
